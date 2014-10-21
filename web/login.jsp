@@ -1,12 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Ligue de soccer</title>
-    </head>
-    <h1>Ligue de soccer</h1>
-    <body>
+<div id="vue">
 
         <form name="login" action="ctrl.do" method="POST">
             <table><tr>
@@ -23,5 +16,4 @@
             </table>
             <input type="hidden" name="action" value="login" />
         </form>
-    </body>
-</html>
+</div>

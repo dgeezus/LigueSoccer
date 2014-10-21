@@ -2,7 +2,8 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <script src="./js/jquery-1.11.1.min.js"></script>
-
+<div id="vue">
+    <h3>Liste des catégories</h3>
 <%
     if(request.getAttribute("message")!= null){
         out.println("<p>"+request.getAttribute("message")+"</p>");
@@ -12,7 +13,7 @@
     String nom, niveau, genre;
     int age, adulte;
 
-    out.println("<table border=\"1\">");
+    out.println("<table id=\"listTab\" border=\"1\">");
     out.println("<tr><th>Nom</th><th>Âge</th><th>Genre</th><th>Niveau</th><th>Adulte</th></tr>");
 
     for (int i = 0; i < listCat.size(); i++) {
@@ -42,18 +43,18 @@
     }
     out.println("</table>");
 %>     
-    <p style="cursor:pointer" id="ajouterForm">Ajouter une catégorie</p>              
+<h3 id="ajoutCat" style="cursor:pointer" id="ajouterForm">Ajouter une catégorie</h3>              
 
-<form style="display:none" id="formulaireCat" name="ajoutCategorie" action="ctrl.do" method="GET"> 
-    <table id="td1">
+<form style="display:none" id="formulaireCat" name="ajoutCategorie" action="ctrl.do" method="POST"> 
+    <table id="formTab">
         <tr>        
             <td><input type="radio" class="adulteR" name="adulte" value="1" checked="checked"/>Adulte</td>
 
             <td> <input type="radio" class="adulteR" name="adulte" value="0" />Enfant</td>
         </tr>
         <tr>
-            <td>Âge</td>
-            <td id="adulte"><select name="ageAdulte">       
+            <td align="right">Âge:</td>
+            <td id="adulte" align="left"><select name="ageAdulte">       
                     <option value="18">18</option>
                     <option value="35">35</option>
                     <option value="45">45</option>                       
@@ -67,8 +68,8 @@
                 </select></td>
         </tr>
         <tr>
-            <td>Niveau</td> 
-            <td>
+            <td align="right">Niveau:</td> 
+            <td align="left">
                 <select name="niveau">       
                     <option value="C">C</option>
                     <option value="B">B</option>
@@ -93,6 +94,7 @@
     </table>
    <input type="hidden" name="action" value="voirAjouterCategorie"/>
    <input type="hidden" name="ajoute" value="ajoute"/>  
+</form>
  <script>
     $("#ajouterForm").click(function() {
         $("#formulaireCat").toggle();
@@ -104,3 +106,4 @@
         $("#enfant").toggle();
     });
 </script>
+</div>

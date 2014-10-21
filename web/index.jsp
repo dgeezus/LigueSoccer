@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
-
 <%@page import="com.ma.util.Connexion"%>
-
 <%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <link rel="stylesheet" href="./styles/style.css" type="text/css" />
         <title>Ligue de soccer</title>
-        <style type="text/css">
-            .errorMessage {color : red;}
-            .resultat {font-weight: bold;}
-        </style>
     </head>
     <body>
-        <h1><a href="index.jsp">Ligue de soccer</a></h1>
+        <div id="tout">
+        <div id="banniere">
+            <div id="banniereText">
+        <h1><a href="index.jsp">Ligue de soccer</a></h1>    
+        </div>  
+        </div>
         <%
-            if (request.getParameter("afficherPage") == null) {
+           // if (request.getParameter("afficherPage") == null) {
         %>
         <jsp:include page="main.jsp" />
         <%
-        } else {
+     //   } else {
             String afficherPage = (String) request.getParameter("afficherPage");
 
             if ("login".equals(afficherPage)) {
@@ -57,10 +57,15 @@
         %>
         <jsp:include page="categorie.jsp" />
         <%
-            } 
             }
+         else if ("login".equals(afficherPage)) {
         %>
-
-    </form>
+        <jsp:include page="login.jsp" />
+        <%
+            }       
+            
+    //        }
+        %>
+        </div>  
 </body>
 </html>

@@ -1,9 +1,3 @@
-<%-- 
-    Document   : listeEquipe
-    Created on : 2014-10-13, 16:41:13
-    Author     : Casa Nova
---%>
-
 <%@page import="com.ma.modele.Utilisateur"%>
 <%@page import="com.ma.modele.Equipe"%>
 <%@page import="java.util.List"%>
@@ -11,13 +5,7 @@
 <%@page import="com.ma.DAO.implement.EquipeDAO"%>
 <%@page import="com.ma.util.Connexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Liste des équipes</title>
-    </head>
-    <body>
+<div id="vue">
         <%
             List<Equipe> equipes = (List<Equipe>)request.getAttribute("listeEquipe");
         out.println("<table id=\"ListeEquipe\" >");
@@ -40,5 +28,4 @@
                }
            }
         %>
-    </body>
-</html>
+</div>

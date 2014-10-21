@@ -1,14 +1,6 @@
 <%@page import="com.ma.modele.Utilisateur"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Ligue de soccer</title>
-    </head>
-    <body>
-      
-    
+<%@page contentType="text/html" pageEncoding="UTF-8"%>      
+ <div id="vue">   
  <%
     Utilisateur user = ((Utilisateur)request.getSession().getAttribute("usagerCourant"));    
  %>                      
@@ -29,5 +21,4 @@
             <input type="submit" value="Retour" name="back" />
             </form>
             </p>
-    </body>
-</html>
+ </div>

@@ -1,14 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Ligue de soccer</title>
         <script src="./js/jquery-1.11.1.min.js"></script>
         <script src="./js/jquery.validate.min.js"></script>
         <script src="./js/additional-methods.min.js"></script>
-    </head>
-    <body>
+<div id="vue">
         <%
             if (request.getAttribute("message") != null) {
                 out.println("<p>" + request.getAttribute("message") + "</p>");
@@ -97,7 +91,4 @@
                 } 
             });
         </script>
-        <script>
-        </script>
-    </body>
-</html>
+</div>
