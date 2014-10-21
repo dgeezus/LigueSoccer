@@ -1,0 +1,97 @@
+.errorMessage {color : red;}
+.resultat {font-weight: bold;}
+
+body {
+    margin: 0;
+    padding: 0;  
+    
+}
+
+#tout{
+    width : 50%;
+    margin-right : auto;
+    margin-left: auto;
+    border : solid black 1px;
+ //   background-color: #E7E7E9;
+ min-width: 950px;
+}
+
+#listTab {
+  	//width : 50%;
+	background-color: #E7E7E9;
+//	margin : 30px;
+	border : solid 1px black;  
+}
+
+#listTab th {
+	color : white;
+	border: 1px solid black;
+	padding: 0 3px;
+	background-color: #002BAB;
+}
+
+#listTab td {
+//	color : white;
+//background-color: #E7E7E9;
+	border: 1px solid black;
+	padding: 0 3px;
+        margin: 10px 10px 10px 10px;
+        width: 100px;
+}
+
+#ajouterForm {
+//   background-color: #E7E7E9;
+   width: 175px;
+}
+
+#vue {
+    padding : 5px;
+    padding-left : 10px;
+    width: 75%;
+    float: left;
+  margin: 0 auto;
+  //  background-color: #E7E7E9;
+}
+
+#menu {
+   float: left;
+ //  background-color: #002BAB;
+ //  height: 100%;
+//   border: 1px solid black;
+   padding: 10px;
+   width: 20%;
+}
+
+#banniere {
+    width: 100%;
+    padding-top : 0px;
+    margin-top : 0px;
+    padding-bottom: 0px;
+ //   margin-bottom: 10px;
+    text-align : right;
+    font: italic 2em georgia;    
+    background : white url('../images/soccer_banner.jpg') no-repeat center;  
+}
+#banniereText {
+  padding : 20px 40px 10px 40px;
+  margin : 0;
+}
+
+#banniere a {
+    color: white;
+       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+       text-decoration: none;      
+}
+
+#banniere a:visited {
+    color: white;
+}
+
+#fin {
+clear: both; 
+	display : block;
+	visibility : hidden;
+	height : 0;
+	border : 0;
+
+}
